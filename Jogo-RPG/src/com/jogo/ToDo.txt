@@ -1,0 +1,39 @@
+Listas de tudo (inda com terminal): 
+
+    1. Menu de interação
+
+    2. Personagem
+        2.1 Classe/Profissão
+
+    3. Monstros
+
+    4. Comerciante
+
+    5. Equipamentos
+
+    6. Magia
+
+    7. Itens
+
+    8. Dinheiro
+
+    9. Dungeon
+
+    10. Cidades
+
+Arrumando para padrão de projeto:
+
+    1. abstract Pessoa:
+        String nome;
+        int idade;
+        int/float força;
+        int/float vida;
+
+        1.2 Personagem extends Pessoa;
+        Super(atributos...)
+        int/float forçaTotal;
+        int/float vidaTotal;
+
+        1.3 Monstros extends Pessoa;
+
+        1.4 Comerciante extends Pessoa;

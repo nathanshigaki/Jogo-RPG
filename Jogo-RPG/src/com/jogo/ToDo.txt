@@ -37,3 +37,141 @@ Arrumando para padrão de projeto:
         1.3 Monstros extends Pessoa;
 
         1.4 Comerciante extends Pessoa;
+
+menu
+    Responsável por toda a lógica de interação com o usuário, como menus de seleção, opções e navegação.
+    Classes típicas:
+        MenuPrincipal
+        MenuPersonagem
+        MenuDungeon
+personagem
+    Contém as classes relacionadas ao personagem do jogador.
+    Subpacotes:
+        classe: Classes de personagens (ex: Guerreiro, Mago, Arqueiro).
+            Guerreiro
+            Mago
+            Arqueiro
+        profissao: Profissões do personagem (ex: Ferreiro, Alquimista).
+            Ferreiro
+            Alquimista
+    Classes típicas:
+        Personagem
+        Atributos
+monstros
+    Contém as classes que representam os monstros do jogo.
+    Classes típicas:
+        Monstro
+        Goblin
+        Dragão
+comerciante
+    Responsável pela lógica dos NPCs (Non-Player Characters) que vendem itens.
+    Classes típicas:
+        Comerciante
+        Loja
+equipamentos
+    Contém as classes que representam armas, armaduras e outros equipamentos.
+    Classes típicas:
+        Arma
+        Armadura
+        Escudo
+magia
+    Responsável pelas habilidades mágicas do jogo.
+    Classes típicas:
+        Magia
+        FeitiçoFogo
+        Cura
+itens
+    Contém os itens que podem ser coletados ou usados no jogo.
+    Classes típicas:
+        Item
+        Pocao
+        Chave
+economia
+    Responsável pela lógica de dinheiro e transações.
+    Classes típicas:
+        Dinheiro
+        Carteira
+dungeon
+    Contém a lógica das dungeons (masmorras) do jogo.
+    Classes típicas:
+        Dungeon
+        Sala
+        Chefe
+cidades
+    Responsável pelas cidades e locais do jogo.
+    Classes típicas:
+        Cidade
+        Taverna
+        Mercado
+util
+    Classes utilitárias que podem ser usadas em todo o projeto.
+    Classes típicas:
+        Calculadora
+        GeradorID
+
+##############################################################################
+
+model
+    Contém as classes que representam as entidades do jogo (dados).
+    Classes típicas:
+        Personagem
+        Monstro
+        Item
+        Equipamento
+        Magia
+        Dungeon
+        Cidade
+repository
+    Responsável por acessar e manipular os dados (como salvar, carregar ou buscar entidades).
+    Classes típicas:
+        PersonagemRepository
+        MonstroRepository
+        ItemRepository
+service
+    Contém a lógica de negócios do jogo.
+    Classes típicas:
+        PersonagemService (gerencia criação, level up, etc.)
+        CombateService (gerencia batalhas)
+        LojaService (gerencia compra e venda de itens)
+controller
+    Responsável por gerenciar a interação com o usuário (menus, comandos, etc.).
+    Classes típicas:
+        MenuController
+        CombateController
+        LojaController
+dto (Data Transfer Object)
+    Usado para transferir dados entre camadas (por exemplo, entre o controller e o service).
+    Classes típicas:
+        PersonagemDTO
+        ItemDTO
+        CombateResultDTO
+exception
+    Contém exceções personalizadas para o jogo.
+    Classes típicas:
+        PersonagemNaoEncontradoException
+        ItemNaoDisponivelException
+util
+    Classes utilitárias para funcionalidades comuns.
+    Classes típicas:
+        CalculadoraCombate
+        GeradorID
+config
+    Configurações do jogo (por exemplo, dificuldade, caminhos de arquivos).
+    Classes típicas:
+        JogoConfig
+        DatabaseConfig (se houver persistência de dados)
+        factory
+Responsável por criar objetos complexos (por exemplo, personagens, monstros).
+    Classes típicas:
+        PersonagemFactory
+        MonstroFactory
+strategy
+    Implementa padrões de estratégia para comportamentos intercambiáveis.
+    Classes típicas:
+        EstrategiaCombate (ex: combate corpo a corpo, combate à distância)
+        EstrategiaMovimento (ex: andar, correr, teleportar)
+observer
+    Implementa padrões de observador para notificações ou eventos.
+    Classes típicas:
+        SistemaDeNotificacao (ex: notificar quando o personagem ganha nível)
+        EventoCombate
